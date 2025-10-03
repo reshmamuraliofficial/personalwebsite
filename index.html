@@ -1,1 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Reshma K — Profile</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #0f1724;
+        --card: #0b1220;
+        --muted: #9aa4b2;
+        --accent: #7c3aed;
+        --glass: rgba(255, 255, 255, 0.04);
+        font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background: linear-gradient(180deg, #071027 0%, #071b2a 100%);
+        color: #e6eef6;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 28px;
+      }
+      .container {
+        width: 100%;
+        max-width: 900px;
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.02),
+          rgba(255, 255, 255, 0.01)
+        );
+        border-radius: 14px;
+        box-shadow: 0 10px 30px rgba(2, 6, 23, 0.7);
+        overflow: hidden;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: 280px 1fr;
+        gap: 0;
+      }
+      .sidebar {
+        padding: 28px;
+        background: var(--card);
+        min-height: 100%;
+      }
+      .avatar {
+        width: 110px;
+        height: 110px;
+        border-radius: 50%;
+        background: var(--glass);
+        display: block;
+        margin: 0 auto 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        font-size: 34px;
+        color: var(--muted);
+      }
+      h1 {
+        font-size: 20px;
+        margin: 6px 0 0;
+        text-align: center;
+      }
+      p.role {
+        margin: 6px 0 12px;
+        text-align: center;
+        color: var(--muted);
+        font-size: 13px;
+      }
+      .meta {
+        font-size: 13px;
+        color: var(--muted);
+        line-height: 1.6;
+      }
+      .section {
+        padding: 20px;
+      }
+      .about {
+        padding: 28px;
+      }
+      .cta {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        margin-top: 14px;
+      }
+      .btn {
+        background: var(--accent);
+        border: none;
+        padding: 10px 14px;
+        border-radius: 8px;
+        color: white;
+        font-weight: 600;
+        cursor: pointer;
+        text-decoration: none;
+      }
+      .btn.secondary {
+        background: transparent;
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        color: var(--muted);
+      }
+      .content {
+        padding: 28px;
+      }
+      h2 {
+        margin: 0 0 12px;
+      }
+      .skills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+      .skill {
+        background: rgba(255, 255, 255, 0.03);
+        padding: 8px 10px;
+        border-radius: 999px;
+        font-size: 13px;
+        color: var(--muted);
+      }
+      .cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+        margin-top: 14px;
+      }
+      .card {
+        background: rgba(255, 255, 255, 0.02);
+        padding: 14px;
+        border-radius: 10px;
+      }
+      .contact {
+        margin-top: 18px;
+      }
+      footer {
+        padding: 18px;
+        text-align: center;
+        color: var(--muted);
+        font-size: 13px;
+      }
 
+      @media (max-width: 760px) {
+        .grid {
+          grid-template-columns: 1fr;
+        }
+        .sidebar {
+          display: flex;
+          gap: 18px;
+          align-items: center;
+        }
+        .avatar {
+          width: 86px;
+          height: 86px;
+        }
+        .cards {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container" role="main">
+      <div class="grid">
+        <aside class="sidebar">
+          <div style="text-align: center">
+            <div class="avatar">RK</div>
+            <h1>Reshma K</h1>
+            <p class="role">B.Sc. Mathematics — Aspiring Data Scientist</p>
+          </div>
+
+          <div style="margin-top: 18px" class="meta">
+            <strong>Location</strong>
+            <div>India</div>
+            <hr
+              style="
+                border: none;
+                height: 1px;
+                background: rgba(255, 255, 255, 0.03);
+                margin: 12px 0;
+              "
+            />
+            <strong>Contact</strong>
+            <div class="contact">
+              Email:
+              <a
+                href="mailto:reshma@example.com"
+                style="color: inherit; text-decoration: underline"
+                >reshma@example.com</a
+              >
+            </div>
+            <div style="margin-top: 10px">Phone: +91 98765 43210</div>
+          </div>
+
+          <div class="cta" style="margin-top: 18px">
+            <a class="btn" href="#about">About</a>
+            <a class="btn secondary" href="#contact">Contact</a>
+          </div>
+        </aside>
+
+        <section class="content">
+          <div id="about" class="about">
+            <h2>About</h2>
+            <p>
+              Hi — I'm Reshma. I graduated with a B.Sc. in Mathematics and I'm
+              transitioning my career to become a Data Scientist. I'm currently
+              preparing by learning core data skills and building small projects
+              to apply what I've learned.
+            </p>
+            <p>
+              Areas I'm focusing on: data cleaning, exploratory data analysis,
+              statistical methods, machine learning basics, and visualization.
+            </p>
+
+            <div style="margin-top: 12px">
+              <!-- Updated Download CV Button -->
+              <a
+                class="btn"
+                href="assets/Reshma_CV.pdf"
+                download="Reshma_CV.pdf"
+                >Download CV</a
+              >
+            </div>
+          </div>
+
+          <div id="skills" class="section">
+            <h2>Skills</h2>
+            <div class="skills" aria-hidden>
+              <span class="skill">Python (beginner)</span>
+              <span class="skill">NumPy</span>
+              <span class="skill">Pandas</span>
+              <span class="skill">Matplotlib / Seaborn</span>
+              <span class="skill">Scikit-learn</span>
+              <span class="skill">SQL (basic)</span>
+              <span class="skill">Data Cleaning</span>
+              <span class="skill">EDA</span>
+            </div>
+
+            <div class="cards">
+              <div class="card">
+                <strong>Currently learning</strong>
+                <p style="margin: 8px 0 0; color: var(--muted)">
+                  Model evaluation, feature engineering, and working on small
+                  datasets to build confidence.
+                </p>
+              </div>
+              <div class="card">
+                <strong>Goal</strong>
+                <p style="margin: 8px 0 0; color: var(--muted)">
+                  Secure an entry-level data scientist role or internship and
+                  contribute to real-world data projects.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div id="contact" class="section">
+            <h2>Contact</h2>
+            <p>
+              If you'd like to connect for mentorship, projects, or job
+              opportunities — feel free to email me.
+            </p>
+            <p style="margin-top: 8px">
+              <strong>Email:</strong>
+              <a
+                href="mailto:reshma@example.com"
+                style="color: inherit; text-decoration: underline"
+                >reshma@example.com</a
+              >
+            </p>
+          </div>
+        </section>
+      </div>
+
+      <footer>Made with ❤️ • Reshma K — Aspiring Data Scientist</footer>
+    </div>
+  </body>
+</html>
